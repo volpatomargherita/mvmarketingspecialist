@@ -89,40 +89,114 @@
             color: white;
         }
 
-        /* INTERNATIONAL VISION */
+      /* GLOBAL VISION EVOLVED */
         .international-section {
             position: relative;
-            padding: 100px 10%;
-            background: var(--soft-pink);
+            padding: 120px 10%;
+            background: #fdfdfd; /* Un bianco pulito per staccare dal cipria */
             overflow: hidden;
-            border-radius: 50px 50px 0 0;
-            margin-top: -50px;
-        }
-
-        .blob {
-            position: absolute; top: -10%; right: -10%;
-            width: 400px; height: 400px;
-            background: var(--cipria-medium);
-            filter: blur(80px); border-radius: 50%; z-index: 1; opacity: 0.6;
+            border-radius: 60px;
+            margin: 40px 2%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
         }
 
         .intl-content {
-            position: relative; z-index: 2;
-            display: flex; align-items: center; gap: 50px; flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
-        .intl-text { flex: 1; min-width: 300px; }
-        .intl-text h2 { font-family: 'Playfair Display', serif; font-size: 38px; margin-bottom: 20px; color: var(--text-dark); }
-
-        .badge-espana {
-            width: 150px; height: 150px;
-            background: var(--white); border: 2px dashed var(--accent); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            text-align: center; font-size: 12px; font-weight: bold;
-            color: var(--accent); animation: rotateBadge 10s linear infinite; padding: 15px;
+        .intl-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--text-dark);
         }
 
-        @keyframes rotateBadge { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .intl-text p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* I punti di forza (Highlights) */
+        .intl-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            padding: 15px;
+            border-left: 2px solid var(--cipria-medium);
+            background: var(--cipria-light);
+            border-radius: 0 15px 15px 0;
+        }
+
+        .highlight-item strong {
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .highlight-item span {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        /* Badge Rotante Moderno */
+        .badge-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circular-text {
+            width: 250px;
+            height: 250px;
+            animation: rotate 15s linear infinite;
+        }
+
+        .circular-text text {
+            font-family: 'Inter';
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            fill: var(--accent);
+            font-size: 14px;
+        }
+
+        .center-logo {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 992px) {
+            .intl-content { grid-template-columns: 1fr; text-align: center; }
+            .intl-text p { margin: 0 auto 30px auto; }
+            .intl-highlights { text-align: left; }
+            .badge-wrapper { margin-top: 40px; }
+        }
 
         /* SERVIZI */
         section { padding: 80px 10%; }
@@ -325,19 +399,50 @@
     </section>
     </section>
 
-    <!-- INTERNATIONAL -->
-    <div id="internazionale" class="international-section reveal">
-        <div class="blob"></div>
+<!-- GLOBAL VISION SEZIONE FIGA -->
+    <section id="internazionale" class="international-section reveal">
         <div class="intl-content">
             <div class="intl-text">
-                <h2 style="color: var(--accent);">Vuoi espandere la tua azienda nel mercato internazionale?</h2>
-                <p>La mia esperienza nel <strong>marketing per il mercato spagnolo</strong> non è solo una competenza linguistica, ma una visione strategica cross-border.</p> <p>Ho appreso logiche di consumo e dinamiche di comunicazione specifiche che mi permettono di guidare aziende italiane verso l'espansione all'estero, o semplicemente di aiutare realtà internazionali a comunicare con efficacia in un mercato globale.</p>
-  
+                <span style="text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: 700; color: var(--accent); display: block; margin-bottom: 15px;">Expansion Strategy</span>
+                <h2>Oltre i confini: <br><i>Global Vision IT ↔ ES</i></h2>
+                <p>Non mi limito a tradurre campagne. Analizzo le differenze culturali e le abitudini di consumo per costruire un ponte strategico tra l'Italia e il mercato spagnolo.</p>
+                
+                <div class="intl-highlights">
+                    <div class="highlight-item">
+                        <strong>Market Entry</strong>
+                        <span>Strategie d'ingresso per brand italiani in Spagna.</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Cultural Fit</strong>
+                        <span>Adattamento del copy e della Brand Identity.</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Ads Cross-Border</strong>
+                        <span>Campagne geolocalizzate multilingua ad alto ROI.</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Network</strong>
+                        <span>Connessione tra realtà internazionali e locali.</span>
+                    </div>
+                </div>
             </div>
-            <div class="badge-espana">MARKETING <br> IT ↔ ES <br> GLOBAL VISION</div>
-        </div>
-    </div>
 
+            <div class="badge-wrapper">
+                <!-- SVG per testo circolare professionale -->
+                <div class="circular-text">
+                    <svg viewBox="0 0 100 100">
+                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"/>
+                        <text>
+                            <textPath xlink:href="#circlePath">
+                                GLOBAL MARKETING STRATEGIST • ITALY • SPAIN • 
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="center-logo">MV</div>
+            </div>
+        </div>
+    </section>
     <!-- SERVIZI -->
     <section id="servizi" class="reveal">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; text-align: center; margin-bottom: 50px;">Servizi Core</h2>
