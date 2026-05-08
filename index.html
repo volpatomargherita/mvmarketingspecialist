@@ -190,6 +190,62 @@
         }
 
         footer { padding: 40px; text-align: center; font-size: 13px; color: #999; border-top: 1px solid var(--cipria-medium); }
+        /* SEZIONE METODO STRATEGICO */
+        .method-section { 
+            padding: 80px 10%; 
+            background: var(--white); 
+            border-radius: 50px; 
+            margin: 20px 2%;
+        }
+        
+        .method-header {
+            text-align: center; 
+            max-width: 700px; 
+            margin: 0 auto 60px auto;
+        }
+
+        .method-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 40px; 
+        }
+
+        .method-step { 
+            position: relative; 
+            padding: 20px; 
+        }
+
+        .method-number { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 50px; 
+            color: var(--cipria-medium); 
+            position: absolute; 
+            top: -15px; 
+            left: 0; 
+            z-index: 0; 
+            opacity: 0.6;
+        }
+
+        .method-content { 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .method-content h4 { 
+            font-family: 'Inter', sans-serif;
+            font-size: 16px; 
+            margin-bottom: 12px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .method-content p {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -229,6 +285,44 @@
             <p style="font-weight: 600; color: var(--accent); margin-bottom: 20px;">Comprendere di cosa ha bisogno il tuo brand per espandersi e posizionarsi richiede una conoscenza approfondita delle strategie di mercato performanti, nonché un’ampia visione d’insieme.</p>
             <p>Nel panorama digitale odierno, non basta più 'esserci'. Il mercato non premia chi grida più forte: premia chi sa parlare al cuore e alla logica del proprio pubblico.</p>
         </div>
+        <!-- IL METODO STRATEGICO -->
+    <section id="metodo" class="method-section reveal">
+        <div class="method-header">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 20px;">Non è solo marketing, è un processo di crescita.</h2>
+            <p style="color: #666;">Il mio metodo si basa su un approccio analitico e creativo, studiato per trasformare ogni investimento in un asset a lungo termine.</p>
+        </div>
+
+        <div class="method-grid">
+            <div class="method-step">
+                <div class="method-number">01</div>
+                <div class="method-content">
+                    <h4>Audit & Analisi</h4>
+                    <p>Studio il mercato, i dati e i competitor per identificare i punti di forza e le opportunità reali del tuo brand.</p>
+                </div>
+            </div>
+            <div class="method-step">
+                <div class="method-number">02</div>
+                <div class="method-content">
+                    <h4>Strategy Design</h4>
+                    <p>Definiamo il posizionamento e il funnel di conversione. Niente azioni casuali, solo mosse calcolate per scalare.</p>
+                </div>
+            </div>
+            <div class="method-step">
+                <div class="method-number">03</div>
+                <div class="method-content">
+                    <h4>Execution</h4>
+                    <p>Dallo sviluppo web alle campagne Ads geolocalizzate. Portiamo la tua offerta davanti alle persone giuste.</p>
+                </div>
+            </div>
+            <div class="method-step">
+                <div class="method-number">04</div>
+                <div class="method-content">
+                    <h4>Optimization</h4>
+                    <p>Monitoraggio costante dei KPI e ottimizzazione delle performance per massimizzare il ritorno sull'investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
 
     <!-- INTERNATIONAL -->
